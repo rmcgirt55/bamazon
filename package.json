@@ -1,0 +1,22 @@
+{
+  "name": "bamazon",
+  "version": "1.0.0",
+  "description": "week 12 hw",
+  "main": "bamazonCustomer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmcgirt55/bamazon.git"
+  },
+  "author": "Richard McGirt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rmcgirt55/bamazon/issues"
+  },
+  "homepage": "https://github.com/rmcgirt55/bamazon#readme",
+  "keywords": [
+    "bamazon"
+  ]
+}

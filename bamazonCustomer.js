@@ -5,10 +5,10 @@ var pw = require("./pw.js");
 
 var connection = mysql.createConnection({
     host: "localhost",
-    port: 404,
+    port: 3306,
     user: "root",
-    password: root,
-    database: "bamazon_db"
+    password: "", //insert user password
+    database: "customer_db"
 });
 
 connection.connect(function(error){
@@ -48,9 +48,11 @@ inquirer.prompt([
         name: "id",
         message: "Please tell us the Id of the item you would like to buy.",
         validate: function(value) {
-            if (value > 0 && is NaN(value) === false && value <= results.length) { return true;
+            if(isNaN(value) == false && parseInt(value) <= results.length && parseInt(value) > 0){
+                return true;
+            } else {
+                return false;
             }
-            return false;
         }
     },
     {
@@ -132,4 +134,13 @@ function lowerQuanity(item, purchasequantity, stockQTY, price) {
                 item_id: parseInt(item)
             }
         ],
-    )}
+    function(error, response) { 
+        if (error) throw error;
+        console.log("Price is $" + customerCost.toFixed(2)\n);
+        welcome();
+    });
+}
+function exit() {
+    console.log("\nnow exiting Bamazon");
+    connection.end();
+}
