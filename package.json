@@ -18,5 +18,10 @@
   "homepage": "https://github.com/rmcgirt55/bamazon#readme",
   "keywords": [
     "bamazon"
-  ]
+  ],
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "figlet": "^1.2.4",
+    "inquirer": "^7.0.0"
+  }
 }

@@ -1,13 +1,12 @@
 var inquirer = require("inquirer");
 var mysql = require("mysql");
 var consoleTableNPM = require("console.table");
-var pw = require("./pw.js");
 
 var connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root",
-    password: "", //insert user password
+    password: "root", //insert user password
     database: "customer_db"
 });
 
@@ -93,7 +92,7 @@ else if (parseInt(transaction.quantity) <= itemquantity) {
     });
 }
 
-functionconsoleTable(results) {
+function consoleTable(results) {
     var values = [];
     for(var i = 0; i < results.length; i++)
  {
@@ -136,7 +135,7 @@ function lowerQuanity(item, purchasequantity, stockQTY, price) {
         ],
     function(error, response) { 
         if (error) throw error;
-        console.log("Price is $" + customerCost.toFixed(2)\n);
+        console.log("Price is $" + customerCost.toFixed(2));
         welcome();
     });
 }
