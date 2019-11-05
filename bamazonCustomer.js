@@ -6,7 +6,7 @@ var connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root",
-    password: "root", //insert user password
+    password: "", //insert user password
     database: "customer_db"
 });
 
@@ -14,13 +14,13 @@ connection.connect(function(error){
     if (error) throw error;
 
     console.log("\n**************************"
-        + "\nWork Harder. Have more Fun. Make things historic! Welcome to Bamazon!\n"
+        + "\nWork Harder. Have more Fun. Make things historic! Wellcome to Bamazon!\n"
         +
         "**************************\n");
-welcome();
+run();
 });
 
-function welcome() {
+function run() {
     inquirer.prompt([
         {
             name: "action",
@@ -80,7 +80,7 @@ inquirer.prompt([
     }
 if (parseInt(transaction.qty) > itemquantity) {
     console.log("\nWE do not have that many. We only have " + itemquantity + " in stock.\n");
-    welcome();
+    run();
 }
 
 else if (parseInt(transaction.quantity) <= itemquantity) {
@@ -136,7 +136,7 @@ function lowerQuanity(item, purchasequantity, stockQTY, price) {
     function(error, response) { 
         if (error) throw error;
         console.log("Price is $" + customerCost.toFixed(2));
-        welcome();
+        run();
     });
 }
 function exit() {
